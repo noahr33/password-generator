@@ -29,6 +29,7 @@ console.log(length)
   upperCase = confirm("Do you want to use uppercase characters?")
   if (upperCase) {
     pass += desiredChars[0]
+
   } 
 
   lowerCase = confirm("Do you want to use lowercase characters?")
@@ -49,13 +50,13 @@ console.log(length)
 
   console.log(pass)
 
-  // for (var i = 0; i < length; i++) {
-    result = pass.charAt(Math.floor(Math.random() * length))
-  // }
+  for (var i = 0; i < pass.length; i++) {
+    result = pass[i][Math.floor(Math.random() * pass.length)]
+  }
 
   
 
-  // result = pass[Math.floor(Math.random() * length.length)]
+  // result = pass[Math.floor(Math.random() * pass.length)]
 
   console.log(result)
 
