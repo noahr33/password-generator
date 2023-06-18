@@ -53,16 +53,6 @@ console.log(charLength)
     pass = pass.replace(",", "")
   }
   
-console.log(pass);
-console.log(charLength);
-
-
-
-// function randomizeInput () {
-//    return pass[Math.floor(Math.random() * charLength)]
-
-// }
-
 
 var answer = []
 
@@ -71,8 +61,9 @@ for (var i = 0; i < charLength; i++) {
   answer.push(randomizeInput)
 }
 
+var displayPass = answer.join("")
     
-    console.log(answer);
+    console.log(displayPass);
  
 }
 
