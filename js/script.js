@@ -61,6 +61,7 @@ for (var i = 0; i < charLength; i++) {
 }
 
 var displayPass = answer.join("")
+
 return displayPass
 
 }
