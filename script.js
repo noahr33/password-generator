@@ -6,7 +6,7 @@ var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"
 
 var numbers = ["1","2","3","4","5","6","7","8","9"]
 
-var specialChars = [" ", "!",'"',"#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@", "[" , "]", "^","_","`","{","|","}","~",]
+var specialChars = [" ", "!",'"',"#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@", "[" , "]", "^","_","`","{","|","}","~"]
 // Assignment Code
 
 
@@ -16,21 +16,22 @@ function generatePassword() {
   var desiredChars = [upperCase, lowerCase, numbers, specialChars]
   pass = []
   
-  length = prompt("Pick password length \n(8-128 characters)")
-  length = parseInt(length)
-  
-  
-  if (length < 8 || length > 128) {
-    alert("Password must be between 8 and 128 characters long.") 
-  } 
 
-console.log(length)
+  var charLength = prompt("Pick password length \n(8-128 characters)")
+  charLength = parseInt(charLength)
+  
+ 
+  if (charLength < 8 || charLength > 128) {
+    alert("Password must be between 8 and 128 characters long.")  
+  } 
+  
+console.log(charLength)
 
   upperCase = confirm("Do you want to use uppercase characters?")
   if (upperCase) {
     pass += desiredChars[0]
 
-  } 
+} 
 
   lowerCase = confirm("Do you want to use lowercase characters?")
   if (lowerCase) {
@@ -47,19 +48,32 @@ console.log(length)
     pass += desiredChars[3]
   } 
   
-
-  console.log(pass)
-
-  for (var i = 0; i < pass.length; i++) {
-    result = pass[i][Math.floor(Math.random() * pass.length)]
-  }
-
   
+  for (var i = 0; i < pass.length; i++) {
+    pass = pass.replace(",", "")
+  }
+  
+console.log(pass);
+console.log(charLength);
 
-  // result = pass[Math.floor(Math.random() * pass.length)]
 
-  console.log(result)
 
+// function randomizeInput () {
+//    return pass[Math.floor(Math.random() * charLength)]
+
+// }
+
+
+var answer = []
+
+for (var i = 0; i < charLength; i++) {
+  var randomizeInput = pass[Math.floor(Math.random() * pass.length)]
+  answer.push(randomizeInput)
+}
+
+    
+    console.log(answer);
+ 
 }
 
   // display password
