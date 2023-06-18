@@ -30,8 +30,7 @@ console.log(charLength)
   upperCase = confirm("Do you want to use uppercase characters?")
   if (upperCase) {
     pass += desiredChars[0]
-
-} 
+  } 
 
   lowerCase = confirm("Do you want to use lowercase characters?")
   if (lowerCase) {
@@ -62,15 +61,11 @@ for (var i = 0; i < charLength; i++) {
 }
 
 var displayPass = answer.join("")
-    
-    console.log(displayPass);
- 
+return displayPass
+
 }
 
-  // display password
 
-
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
