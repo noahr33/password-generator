@@ -22,9 +22,10 @@ function generatePassword() {
 
   if (charLength < 8 || charLength > 128) {
     alert("Password must be between 8 and 128 characters long.")  
-  } 
-// Collects the user's password parameters
-  while (charLength >= 8 && charLength <= 128) {
+    }
+
+  // Collects the user's password parameters
+  if (charLength >= 8 && charLength <= 128) {
     upperCase = confirm("Do you want to use uppercase characters?")
     if (upperCase) {
       pass += desiredChars[0]
@@ -50,7 +51,6 @@ function generatePassword() {
       pass = pass.replace(",", "")
     }
     
-
   //  Code randomizes the characters the user chooses
     var answer = []
 
@@ -63,6 +63,8 @@ function generatePassword() {
 
     return displayPass
     
+  } else {
+    return "Please Try Again \n Passwords must be 8 - 128 characters long"
   }
 }
 
